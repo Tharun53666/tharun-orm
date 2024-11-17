@@ -36,8 +36,10 @@ class Costumer(models.Model):
 class CostumerAdmin(admin.ModelAdmin):
   list_display=('cid','accountnumber','name','age','address','phonenumber')
 
-from django.contrib import admin
+from django.contrib import admin 
+
 from.models import Costumer,CostumerAdmin
+
 admin.site.register(Costumer,CostumerAdmin)
 
 ## OUTPUT
