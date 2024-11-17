@@ -41,6 +41,7 @@ from.models import Costumer,CostumerAdmin
 admin.site.register(Costumer,CostumerAdmin)
 
 ## OUTPUT
+![WhatsApp Image 2024-11-18 at 1 31 42 AM](https://github.com/user-attachments/assets/18669e24-be47-4818-ab0c-3ebf06965fb5)
 
 
 
