@@ -22,27 +22,31 @@ Enter the code for admin.py and models.py
 Execute Django admin and create details for 10 books
 
 ## PROGRAM
+```
+models.py
+
 from django.db import models
 from django.contrib import admin
-class Costumer(models.Model):
-  cid=models.CharField(max_length=20,primary_key="eid")
-  accountnumber=models.IntegerField()
-  name=models.CharField(max_length=20)
-  age=models.IntegerField()
-  address=models.CharField(max_length=50)
-  phonenumber=models.IntegerField()
+class Bank_loan (models.Model):
+    customer_id=models.IntegerField(primary_key=True)
+    customer_name=models.CharField(max_length=100)
+    loan_amount=models.IntegerField()
+    customer_age=models.IntegerField()
+    email=models.EmailField()
 
+class Bank_loanAdmin(admin.ModelAdmin):
+    list_display=('customer_id','customer_name','loan_amount','customer_age','email')
 
-class CostumerAdmin(admin.ModelAdmin):
-  list_display=('cid','accountnumber','name','age','address','phonenumber')
+admin.py
 
-from django.contrib import admin 
-from.models import Costumer,CostumerAdmin
-admin.site.register(Costumer,CostumerAdmin)
+from django.contrib import admin
+from .models import Bank_loan,Bank_loanAdmin
+admin.site.register(Bank_loan,Bank_loanAdmin)
+
+```
 
 ## OUTPUT
-![WhatsApp Image 2024-11-18 at 1 31 42 AM](https://github.com/user-attachments/assets/18669e24-be47-4818-ab0c-3ebf06965fb5)
-
+![alt text](<Screenshot 2024-12-18 113833-1.png>)
 
 
 ## RESULT
