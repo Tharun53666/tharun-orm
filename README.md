@@ -51,3 +51,4 @@ admin.site.register(Bank_loan,Bank_loanAdmin)
 
 ## RESULT
 Thus the program for creating a database using ORM hass been executed successfully
+
